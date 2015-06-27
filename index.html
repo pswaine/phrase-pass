@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap-switch.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.sha256.min.js"></script>
+        <script type="text/javascript" src="assets/js/sha512.min.js"></script>
+        <script type="text/javascript" src="assets/js/form-handler.js"></script>
+        <script type="text/javascript" src="assets/js/hash-handler-v1.js"></script>
+        <script type="text/javascript" src="assets/js/hash-handler-v2.js"></script>
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-switch.min.css">
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span>PhrasePass</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"></li>
+                        <li>
+                            <a href="#" id="nav-info"><i class="fa fa-2x fa-fw fa-info-circle"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form role="form">
+                            <div class="form-group passPhrase">
+                                <label class="control-label" for="passPhrase">Pass Phrase</label>
+                                <p class="help-block text-muted" style="display: inline;">(min size 20 chars)</p>
+                                <input class="form-control input-sm" id="passPhrase" type="password">
+                            </div>
+                            <div class="form-group siteIdentifier">
+                                <label class="control-label" for="siteIdentifier">Service Identifier</label>
+                                <p class="help-block text-muted" style="display: inline;">(e.g. "amazon", "facebook")</p>
+                                <input class="form-control input-sm" id="siteIdentifier"
+                                type="text">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="passLength">Password Length</label>
+                                <select class="form-control input-sm" id="passLength">
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="32">32</option>
+                                    <option value="33">33</option>
+                                    <option value="34">34</option>
+                                    <option value="35">35</option>
+                                    <option value="36">36</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                    <option value="41">41</option>
+                                    <option value="42">42</option>
+                                    <option value="43">43</option>
+                                    <option value="44">44</option>
+                                    <option value="45">45</option>
+                                    <option value="46">46</option>
+                                    <option value="47">47</option>
+                                    <option value="48">48</option>
+                                    <option value="49">49</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="capitalLetter">Add Capital Letter</label>
+                                <div>
+                                    <input type="checkbox" id="capitalLetter" value="1" checked>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="specialCharacter">Add Special Character</label>
+                                <div>
+                                    <input type="checkbox" id="specialCharacter" value="1" checked>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="engine">Generator Engine</label>
+                                <select class="form-control input-sm" id="engine">
+                                    <option value="1">v1 (deprecated)</option>
+                                    <option value="2" selected>v2 (recommended)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Generate Password</button>
+                            <button type="button" class="btn btn-info" id="clear">Clear</button>
+                        </form>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 15px;">
+                        <div class="alert alert-dismissable alert-info" id="passString">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-error">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title text-danger">Oops, the following errors occured:</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ol>
+                            <li id="errorPassPhraseEmpty">The Pass Phrase was empty.</li>
+                            <li id="errorPassPhraseLength">The Pass Phrase entered was less than 20 characters.</li>
+                            <li id="errorSiteIdentifierEmpty">The Site Identifier was empty.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-info">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title text-primary">Info</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>A utility to generate and reliably regenerate a strong password based
+                            on a phrase of 20 characters or more. Run every time you need to log into
+                            a site to avoid storing your password in files or online. Enter an identifier
+                            (e.g. "amazon" or "facebook") to make the generated password distinct per
+                            service.
+                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
