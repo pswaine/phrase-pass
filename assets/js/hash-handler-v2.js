@@ -1,6 +1,6 @@
 var HashHandlerV2 = {
 
-    defaultPassLength: 50,
+    defaultPassLength: 30,
     passStringFull: null,
     passString: null,
     specialCharacterMap: {
@@ -32,7 +32,7 @@ var HashHandlerV2 = {
         $.sha512 = sha512;
 
         this.passStringFull = $('#siteIdentifier').val() + $('#passPhrase').val();
-        for (var i = 0; i < 50000; i++) {
+        for (var i = 0; i < 10000; i++) {
             this.passStringFull = $.sha512(this.passStringFull);
         }
         this.passString = this.passStringFull.substring(0, $('#passLength').val());

@@ -46,7 +46,6 @@
 
         function prepareFormSubmission() {
             $('form').submit(function(event) {
-                console.log($('#capitalLetter').val());
                 event.preventDefault();
                 form.hidePassword();
 
